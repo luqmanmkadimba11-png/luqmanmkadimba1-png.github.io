@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LQ Cyber">
+  <rect width="64" height="64" rx="14" fill="#0b1f24"/>
+  <path d="M32 8 12 15v15c0 12.5 8.4 21.6 20 26 11.6-4.4 20-13.5 20-26V15L32 8Z" fill="none" stroke="#22d3ee" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="32" cy="27" r="5.2" fill="#22d3ee"/>
+  <path d="M29.6 30.5h4.8l1.6 11h-8l1.6-11Z" fill="#22d3ee"/>
+  <text x="32" y="54" font-family="Arial, sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#22d3ee">LQ</text>
+</svg>

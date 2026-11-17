@@ -1,0 +1,9 @@
+{
+  "appId": "com.lqcyber.app",
+  "appName": "LQ Cyber",
+  "webDir": "www",
+  "backgroundColor": "#f6f7f4",
+  "android": {
+    "allowMixedContent": false
+  }
+}
