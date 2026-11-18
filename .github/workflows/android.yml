@@ -1,42 +1,40 @@
 name: Jenga APK ya Android
 on:
   push:
-    branches:[main]
+    branches: [main]
   workflow_dispatch:
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses:  action/checkout@v4
+      - uses: actions/checkout@v4
 
-      - uses:  action/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-           node-version: 20
+          node-version: 20
 
-       - uses:  action/setup-java@v4
-         with:
-           distribution:  temurin
-           java-version:   17
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
 
-        - name: sakinisha vifurushi
-        run:  npm install
+      - name: Sakinisha vifurushi
+        run: npm install
 
-        -name: unda mradi wa android
-          run: |
-           if [  !  -d android ]; then npx cap add android;  fi
-           npx cap sync android
+      - name: Unda mradi wa Android
+        run: |
+          if [ ! -d android ]; then npx cap add android; fi
+          npx cap sync android
 
-        -name: jenga APK 
-         run:  |
-            cd android
-            chmod +x gradlew
-            ./gladlew assembleDebug
+      - name: Jenga APK
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug
 
-        -name: Pakia APK 
-         run: actions/upload-artfact@v4
-         with:
+      - name: Pakia APK
+        uses: actions/upload-artifact@v4
+        with:
           name: app-debug
-          path: android/app/build/output/apk/debug/app-.apk
-        
-          
+          path: android/app/build/outputs/apk/debug/app-debug.apk
